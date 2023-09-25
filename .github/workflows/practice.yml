@@ -2,18 +2,17 @@ name: run-unit-tests
 run-name: ${{ github.actor }} is running unit tests
 on: [push]
 jobs:
-    run-ui-tests:
+    start-webapp-and-run-ui-tests:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v3
           - uses: actions/setup-node@v3
             with:
               node-version: '20'
-          - run: cd ./src/webapp && 
-                npm ci && 
-                npm run start-server && 
-                sleep 10 && 
-                curl http://localhost:8080 -I &&
-                cd ./e2e/cypress &&
-                npm ci &&
-                npm run test
+          - run: |
+              cd ./src/webapp &&
+              npm ci &&
+              npm run start-server &
+              sleep 10 &&
+              curl http://localhost:8080 -I
+          - run: cd ./e2e/cypress && npm ci && npm run test
