@@ -9,6 +9,5 @@ jobs:
           - uses: actions/setup-node@v3
             with:
               node-version: '20'
-          - run: cd ./e2e/cypress
-          - run: npm ci && npm run test
+          - run: cd ./e2e/cypress && npm ci && npm run test
 
