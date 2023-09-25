@@ -9,5 +9,7 @@ jobs:
           - uses: actions/setup-node@v3
             with:
               node-version: '20'
-          - run: cd ./src/webapp/api && npm ci && npm run test
+          - run: cd ./e2e/cypress/
+          - run: npm ci
+          - run: npm run test
 
