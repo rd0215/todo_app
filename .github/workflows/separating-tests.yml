@@ -1,5 +1,5 @@
-name: run-unit-tests
-run-name: ${{ github.actor }} is running unit tests
+name: separating-tests
+run-name: ${{ github.actor }} is separating tests
 on: [push]
 jobs:
     start-webapp-and-run-ui-tests:
