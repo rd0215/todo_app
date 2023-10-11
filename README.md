@@ -26,7 +26,7 @@ Then you'll be able to navigate to the `localhost:8080` in your browser and use 
 - `npm install`
 - `npm run test`
 
-Test Test Test test push up again
+Push test 
 
 Alternatively you could run `npm run open` to open Cypress UI and start the tests from there.
 > Note that the tests would fail if you are NOT running the todo app, see the instructions above ⬆️ 
